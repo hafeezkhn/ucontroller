@@ -1,9 +1,6 @@
 
-# [Micro-Controllers] 
-<a href="page2.md"> 
-<kbd>Next <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Symbols/Right%20Arrow.png" width="20" align="center" alt="arrow" /></kbd>
-</a>
-
+  **[⬅️Prev](stm32/STM32x.md)** [Micro-Controllers] **[Next➡️](sitaraMCU/AM2x.md)** 
+  
 # MCU — Microcontroller Unit
 
 ## Basic Idea
