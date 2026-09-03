@@ -98,3 +98,52 @@ Application / RTOS
 | **Example** | Atmel ATmega328 (used in Arduino). | Intel Core i7, ARM Cortex-A72. | TI TMS320, Analog Devices SHARC. | Xilinx Spartan, Intel Cyclone. | Apple's A-series chips, Bitcoin mining chips. | Qualcomm Snapdragon, Apple M1. | Xilinx XC9500, Altera MAX series. |
 
 
+> Microcontrollers <br>
+● MCU architecture
+● Cortex-M
+● Registers
+● Stack pointer
+● Vector table
+● Reset handler
+● Startup code
+● Memory layout
+● Flash/RAM
+● Interrupt handling
+● GPIO
+● Timers
+● UART
+● SPI
+● I2C
+● CAN
+● ADC/DAC
+
+> Bare-Metal Programming <br>
+● Startup code
+● Linker scripts
+● Vector tables
+● Register-level programming
+● Peripheral initialization
+● Interrupt handlers
+● DMA
+● Timers
+● Watchdog
+● Boot flow
+● Firmware update mechanisms
+
+> RTOS <br>
+● FreeRTOS
+● Real-time scheduling
+● Tasks/threads
+● Mutexes
+● Semaphores
+● Message queues
+● Event flags
+● Interrupts
+● Timers
+● Priority inversion
+● Priority inheritance
+● Deterministic execution
+● ISR vs task context
+● Memory management
+● RTOS architecture
+
