@@ -9,7 +9,6 @@
 - Each character usually starts with a **start bit**, followed by the data bits, an optional parity bit, and one or more **stop bits**.
 - The receiver detects the start bit and then uses its own clock to sample the data at the expected bit times. Therefore, both sides must have sufficiently accurate timing.
 - Unlike I2C or SPI, UART is normally a simple point-to-point connection using transmit and receive lines, plus a common ground. It does not naturally use device addresses or a shared clock.
-- In my Linux middleware work, I used UART for inter-node communication. I handled the transmit and receive path, buffering, configuration, and error handling, while the higher-level software used POSIX APIs.
 
 ---
 
