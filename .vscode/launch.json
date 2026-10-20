@@ -2,7 +2,7 @@
     "configurations": [
         {
           "name": "GDB",
-          "type": "cppdbg",
+          "type": "node",
           "request": "launch",
           "program": "${workspaceFolder}/port/main.elf",
           "args": [],
