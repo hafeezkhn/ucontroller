@@ -1,0 +1,115 @@
+
+main.elf:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+00000000 <vector_table>:
+   0:	0000abcd 	andeq	sl, r0, sp, asr #23
+   4:	00000199 	muleq	r0, r9, r1
+	...
+
+00000198 <reset_handler>:
+
+    .section .text
+    .align 1
+    .type reset_handler, %function
+reset_handler:
+    mov r1, #1
+ 198:	2101      	movs	r1, #1
+    mov r2, #2
+ 19a:	2202      	movs	r2, #2
+    add r3, r1, r2
+ 19c:	188b      	adds	r3, r1, r2
+    b .
+ 19e:	e7fe      	b.n	19e <reset_handler+0x6>
+
+Disassembly of section .ARM.attributes:
+
+00000000 <.ARM.attributes>:
+   0:	00002041 	andeq	r2, r0, r1, asr #32
+   4:	61656100 	cmnvs	r5, r0, lsl #2
+   8:	01006962 	tsteq	r0, r2, ror #18
+   c:	00000016 	andeq	r0, r0, r6, lsl r0
+  10:	726f4305 	rsbvc	r4, pc, #335544320	@ 0x14000000
+  14:	2d786574 	cfldr64cs	mvdx6, [r8, #-464]!	@ 0xfffffe30
+  18:	0600334d 	streq	r3, [r0], -sp, asr #6
+  1c:	094d070a 	stmdbeq	sp, {r1, r3, r8, r9, sl}^
+  20:	Address 0x20 is out of bounds.
+
+
+Disassembly of section .debug_line:
+
+00000000 <.debug_line>:
+   0:	00000032 	andeq	r0, r0, r2, lsr r0
+   4:	001a0002 	andseq	r0, sl, r2
+   8:	01020000 	mrseq	r0, (UNDEF: 2)
+   c:	000a0efb 	strdeq	r0, [sl], -fp
+  10:	01010101 	tsteq	r1, r1, lsl #2
+  14:	01000000 	mrseq	r0, (UNDEF: 0)
+  18:	6f6f6200 	svcvs	0x006f6200
+  1c:	00532e74 	subseq	r2, r3, r4, ror lr
+  20:	00000000 	andeq	r0, r0, r0
+  24:	98020500 	stmdals	r2, {r8, sl}
+  28:	03000001 	movweq	r0, #1
+  2c:	1e1e010a 	mufnee	f0, f6, #2.0
+  30:	0001021e 	andeq	r0, r1, lr, lsl r2
+  34:	Address 0x34 is out of bounds.
+
+
+Disassembly of section .debug_info:
+
+00000000 <.debug_info>:
+   0:	00000022 	andeq	r0, r0, r2, lsr #32
+   4:	00000002 	andeq	r0, r0, r2
+   8:	01040000 	mrseq	r0, (UNDEF: 4)
+   c:	00000000 	andeq	r0, r0, r0
+  10:	00000198 	muleq	r0, r8, r1
+  14:	000001a0 	andeq	r0, r0, r0, lsr #3
+  18:	00000000 	andeq	r0, r0, r0
+  1c:	00000007 	andeq	r0, r0, r7
+  20:	00000036 	andeq	r0, r0, r6, lsr r0
+  24:	Address 0x24 is out of bounds.
+
+
+Disassembly of section .debug_abbrev:
+
+00000000 <.debug_abbrev>:
+   0:	10001101 	andne	r1, r0, r1, lsl #2
+   4:	12011106 	andne	r1, r1, #-2147483647	@ 0x80000001
+   8:	1b0e0301 	blne	380c14 <reset_handler+0x380a7c>
+   c:	130e250e 	movwne	r2, #58638	@ 0xe50e
+  10:	00000005 	andeq	r0, r0, r5
+
+Disassembly of section .debug_aranges:
+
+00000000 <.debug_aranges>:
+   0:	0000001c 	andeq	r0, r0, ip, lsl r0
+   4:	00000002 	andeq	r0, r0, r2
+   8:	00040000 	andeq	r0, r4, r0
+   c:	00000000 	andeq	r0, r0, r0
+  10:	00000198 	muleq	r0, r8, r1
+  14:	00000008 	andeq	r0, r0, r8
+	...
+
+Disassembly of section .debug_str:
+
+00000000 <.debug_str>:
+   0:	746f6f62 	strbtvc	r6, [pc], #-3938	@ 8 <vector_table+0x8>
+   4:	2f00532e 	svccs	0x0000532e
+   8:	6b726f77 	blvs	1c9bdec <reset_handler+0x1c9bc54>
+   c:	63617073 	cmnvs	r1, #115	@ 0x73
+  10:	752f7365 	strvc	r7, [pc, #-869]!	@ fffffcb3 <reset_handler+0xfffffb1b>
+  14:	746e6f63 	strbtvc	r6, [lr], #-3939	@ 0xfffff09d
+  18:	6c6c6f72 	stclvs	15, cr6, [ip], #-456	@ 0xfffffe38
+  1c:	732f7265 			@ <UNDEFINED> instruction: 0x732f7265
+  20:	32336d74 	eorscc	r6, r3, #116, 26	@ 0x1d00
+  24:	5f34302f 	svcpl	0x0034302f
+  28:	534f5452 	movtpl	r5, #62546	@ 0xf452
+  2c:	6572662f 	ldrbvs	r6, [r2, #-1583]!	@ 0xfffff9d1
+  30:	6f745265 	svcvs	0x00745265
+  34:	4e470073 	mcrmi	0, 2, r0, cr7, cr3, {3}
+  38:	53412055 	movtpl	r2, #4181	@ 0x1055
+  3c:	342e3220 	strtcc	r3, [lr], #-544	@ 0xfffffde0
+  40:	Address 0x40 is out of bounds.
+
